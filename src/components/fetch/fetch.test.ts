@@ -1,6 +1,6 @@
-const fetchy = require('./fetch')
+const fetchFunction = require('./fetch')
 
 test('Fetching',() => {
     const string = "Hello World";
-    expect(fetchy(string)).toBe(string);
+    expect(fetchFunction(string)).toBe(string);
 })
