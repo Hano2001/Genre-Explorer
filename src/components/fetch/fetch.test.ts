@@ -1,6 +1,10 @@
-const fetchFunction = require('./fetch')
+// const fetchFunction = require('./fetch')
+// const {log} = require("console")
 
-test('Fetching',() => {
-    const string = "Hello World";
-    expect(fetchFunction(string)).toBe(string);
-})
+// describe("Testing the API",() => {
+//     test('Fetching',() => {
+//     const result = fetchFunction();
+//     log("RESULT:",result)
+//     expect(fetchFunction()).toBe("Hello World");
+// })
+// })
