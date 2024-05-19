@@ -11,13 +11,19 @@ export default function FetchRender() {
     }
   }, []);
 
-  console.log(data);
   return (
     <>
       <div>
         <h1>Hello</h1>
-        {data.map((item: any) => {
-          return <ApiPlaceHolder fName={item.name.first} lName={item.name.last} imgURL={item.picture.medium}/>
+        {data.map((item: any, index: number) => {
+          return (
+            <ApiPlaceHolder
+              key={index}
+              fName={item.name.first}
+              lName={item.name.last}
+              imgURL={item.picture.medium}
+            />
+          );
         })}
       </div>
     </>
