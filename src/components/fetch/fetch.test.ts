@@ -1,10 +1,8 @@
-const fetchFunction = require('./fetch')
-const {log} = require("console")
+import FetchFunction from "./Fetch";
 
-describe("Testing the API",() => {
-    test('Fetching',() => {
-    const result = fetchFunction();
-    log("RESULT:",result)
-    expect(fetchFunction()).toBe("Hello World");
-})
-})
+describe("Testing the API", () => {
+  test("Fetching", async () => {
+    const result = await FetchFunction();
+    expect(result.length).toEqual(30);
+  });
+});
