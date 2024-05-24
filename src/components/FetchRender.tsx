@@ -7,21 +7,20 @@ export default function FetchRender() {
 
   useEffect(() => {
     if (data.length === 0) {
-      FetchFunction().then(setData);
+      FetchFunction().then(setData).then;
     }
   }, []);
-
+  console.log(data)
   return (
     <>
       <div>
         <h1>Hello</h1>
-        {data.map((item: any, index: number) => {
+        {data.map((item: any) => {
           return (
             <ApiPlaceHolder
-              key={index}
-              fName={item.name.first}
-              lName={item.name.last}
-              imgURL={item.picture.medium}
+              key={item.idCategory}
+              name={item.strCategory}
+              imgURL={item.strCategoryThumb}
             />
           );
         })}
