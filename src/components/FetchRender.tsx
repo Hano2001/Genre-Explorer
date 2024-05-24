@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import FetchFunction from "./fetch/Fetch.ts";
 import ApiPlaceHolder from "./ApiPlaceHolder.tsx";
+import CategoryMenu from "./CategoryMenu.tsx";
 
 export default function FetchRender() {
   const [data, setData] = useState([]);
@@ -11,11 +12,15 @@ export default function FetchRender() {
     }
   }, []);
   console.log(data)
-  return (
+  let categories = [...data]
+  if(categories.length !== 0) {
+    return (
     <>
       <div>
         <h1>Hello</h1>
-        {data.map((item: any) => {
+        
+        <CategoryMenu list={categories}/>
+        {/* {data.map((item: any) => {
           return (
             <ApiPlaceHolder
               key={item.idCategory}
@@ -23,8 +28,13 @@ export default function FetchRender() {
               imgURL={item.strCategoryThumb}
             />
           );
-        })}
+        })} */}
       </div>
     </>
   );
+  }
+  else {
+    <p>...</p>
+  }
+  
 }
