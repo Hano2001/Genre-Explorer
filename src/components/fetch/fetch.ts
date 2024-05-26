@@ -28,4 +28,14 @@ export async function RecipeFetchFunction(category:string) {
   return await result.meals[randomIndex];
 }
 
+export async function RecipeDetailsFetch(id:string) {
+  const result = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`)
+  .then((response) => response.json())
+  .then((data) => {
+    return data;
+  })
+  console.log(result)
+  return await result.meals
+}
+
 //module.exports = CategoryFetchFunction;
