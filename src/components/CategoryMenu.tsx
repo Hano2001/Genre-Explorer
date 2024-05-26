@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function CategoryMenu({ list }: any) {
     const [selected, setSelected] = useState("x");
@@ -14,7 +15,7 @@ export default function CategoryMenu({ list }: any) {
           );
         })}
       </select>
-      <button onClick={() => console.log(selected)}>TEST</button>
+      <Link to={`/${selected}`}>Enter</Link>
     </>
-  );
+  );        
 }
