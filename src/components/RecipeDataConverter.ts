@@ -5,7 +5,7 @@ function dataCleaner(obj: any) {
   const newRecipeObj: Imain = {} as Imain
   const ingredients: Tdata = [];
   const measures: Tdata = [];
-  // Object.keys(obj[0]).map(item => {
+  // Object.keys(obj[0]).map(item => {  
   //     console.log(item)
   // })
 

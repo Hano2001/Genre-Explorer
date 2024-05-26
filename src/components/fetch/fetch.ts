@@ -1,3 +1,5 @@
+import RecipeDataConverter from "../RecipeDataConverter";
+
 export default async function CategoryFetchFunction() {
   //const result = "Harald"
 
@@ -34,7 +36,7 @@ export async function RecipeDetailsFetch(id:string) {
   .then((data) => {
     return data;
   })
-  return await result.meals[0]
+  return await RecipeDataConverter(result.meals[0]);
 }
 
 //module.exports = CategoryFetchFunction;
