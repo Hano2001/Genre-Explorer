@@ -11,7 +11,6 @@ export default function FetchRender() {
       CategoryFetchFunction().then(setData).then;
     }
   }, []);
-  console.log(data)
   let categories = [...data]
   if(categories.length !== 0) {
     return (
