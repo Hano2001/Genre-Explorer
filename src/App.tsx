@@ -3,6 +3,7 @@ import "./App.css";
 import FetchRender from "./components/FetchRender.tsx";
 import Home from "./pages/Home.tsx";
 import Category from "./pages/Category.tsx";
+import Recipe from "./pages/Recipe.tsx";
 
 function App() {
 
@@ -10,6 +11,7 @@ function App() {
   <Routes>
     <Route path="/" element={<Home/>}></Route>
     <Route path="/:c" element={<Category/>}></Route>
+    <Route path="/recipe/:i" element={<Recipe/>}></Route>
   </Routes>
   );
 }

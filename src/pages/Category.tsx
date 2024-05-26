@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { Values } from "../components/InterFaces";
 import { RecipeFetchFunction } from "../components/fetch/Fetch";
 
 export default function Category() {
@@ -16,13 +15,14 @@ export default function Category() {
     RecipeFetchFunction(params.c).then(setData).then;
   }
 
-  console.log(data);
+  const recipeEndpoint = "/recipe/" + data.idMeal;
 
   return (
     <div>
       <h1>Here is your random Recipe! Happy Cooking!</h1>
       <h2>{data.strMeal}</h2>
       <button onClick={FetchNewRecipe}>Generate new Recipe</button>
+      <Link to={recipeEndpoint}>Recipe Details</Link>
       <Link to="/">Back to Categories</Link>
     </div>
   );
