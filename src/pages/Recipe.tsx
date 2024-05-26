@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { RecipeDetailsFetch } from "../components/fetch/Fetch";
 
 export default function Recipe() {
   const [data, setData] = useState<any>([]);
-  const params:any = useParams();
+  const params: any = useParams();
   useEffect(() => {
     if (data.length === 0) {
       RecipeDetailsFetch(params.i).then(setData).then;
