@@ -16,7 +16,6 @@ export default async function CategoryFetchFunction() {
 }
 
 export async function RecipeFetchFunction(category:string) {
-  console.log(category)
   const result = await fetch(
     `https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`
 
@@ -24,8 +23,9 @@ export async function RecipeFetchFunction(category:string) {
   .then((data) => {
     return data
   });
-  console.log(result)
-  return await result
+  const randomIndex = Math.floor(Math.random() * result.meals.length);
+  console.log("RandomIndex:",randomIndex);
+  return await result.meals[randomIndex];
 }
 
 //module.exports = CategoryFetchFunction;
