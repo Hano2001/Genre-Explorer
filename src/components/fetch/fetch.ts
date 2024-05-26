@@ -1,4 +1,4 @@
-export default async function FetchFunction() {
+export default async function CategoryFetchFunction() {
   //const result = "Harald"
 
   // Recipe api: www.themealdb.com/api/json/v1/1/categories.php
@@ -15,4 +15,4 @@ export default async function FetchFunction() {
   return await result;
 }
 
-//module.exports = fetchFunction;
+//module.exports = CategoryFetchFunction;

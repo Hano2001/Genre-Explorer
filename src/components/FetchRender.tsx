@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import FetchFunction from "./fetch/Fetch.ts";
+import CategoryFetchFunction from "./fetch/Fetch.ts";
 import ApiPlaceHolder from "./ApiPlaceHolder.tsx";
 import CategoryMenu from "./CategoryMenu.tsx";
 
@@ -8,7 +8,7 @@ export default function FetchRender() {
 
   useEffect(() => {
     if (data.length === 0) {
-      FetchFunction().then(setData).then;
+      CategoryFetchFunction().then(setData).then;
     }
   }, []);
   console.log(data)
