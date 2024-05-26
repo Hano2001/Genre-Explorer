@@ -16,7 +16,7 @@ export default function CategoryMenu({ list }: any) {
 
         {list.map((category: any) => {
           return (
-            <option value={category.strCategory}>{category.strCategory}</option>
+            <option key={category.idCategory} value={category.strCategory}>{category.strCategory}</option>
           );
         })}
       </select>
