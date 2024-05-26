@@ -1,15 +1,16 @@
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import FetchRender from "./components/FetchRender.tsx";
+import Home from "./pages/Home.tsx";
+import Category from "./pages/Category.tsx";
 
 function App() {
 
   return (
-    <>
-      <h1>Genre Explorer!</h1>
-      <div>
-        <FetchRender />
-      </div>
-    </>
+  <Routes>
+    <Route path="/" element={<Home/>}></Route>
+    <Route path="/:id" element={<Category/>}></Route>
+  </Routes>
   );
 }
 
