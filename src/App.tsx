@@ -1,6 +1,5 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import FetchRender from "./components/FetchRender.tsx";
 import Home from "./pages/Home.tsx";
 import Category from "./pages/Category.tsx";
 import Recipe from "./pages/Recipe.tsx";
