@@ -34,7 +34,6 @@ export async function RecipeDetailsFetch(id:string) {
   .then((data) => {
     return data;
   })
-  console.log(result.meals[0])
   return await result.meals[0]
 }
 

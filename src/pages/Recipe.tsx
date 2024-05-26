@@ -13,7 +13,8 @@ export default function Recipe() {
         
     }
   }, []);
-  console.log(RecipeDataConverter(data))
+  const convertedData = (RecipeDataConverter(data))
+  const {main, ingredients, measures} = convertedData;
   if (data.length === 0) {
     return (
       <>
@@ -24,6 +25,10 @@ export default function Recipe() {
     return (
       <div>
         <h1>Recipe for: {data.strMeal}</h1>
+        {ingredients.map((ing, index) => {
+            return <p>{ing}: {measures[index]}</p>
+        })}
+        <h5>{main.strInstructions}</h5>
       </div>
     );
   }
