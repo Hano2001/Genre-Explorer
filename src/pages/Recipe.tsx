@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { RecipeDetailsFetch } from "../components/fetch/Fetch";
 import RecipeDataConverter from "../components/RecipeDataConverter";
 
@@ -26,9 +26,10 @@ export default function Recipe() {
       <div>
         <h1>Recipe for: {data.strMeal}</h1>
         {ingredients.map((ing, index) => {
-            return <p>{ing}: {measures[index]}</p>
+            return <p>{measures[index]} {ing}</p>
         })}
-        <h5>{main.strInstructions}</h5>
+        <h3>{main.strInstructions}</h3>
+        <Link to="/">Home</Link>
       </div>
     );
   }
