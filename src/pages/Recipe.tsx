@@ -3,8 +3,8 @@ import { useParams } from "react-router-dom";
 import { RecipeDetailsFetch } from "../components/fetch/Fetch";
 
 export default function Recipe() {
-  const [data, setData] = useState([]);
-  const params = useParams();
+  const [data, setData] = useState<any>([]);
+  const params:any = useParams();
   useEffect(() => {
     if (data.length === 0) {
       RecipeDetailsFetch(params.i).then(setData).then;

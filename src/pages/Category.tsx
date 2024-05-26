@@ -4,8 +4,8 @@ import { RecipeFetchFunction } from "../components/fetch/Fetch";
 import DishImage from "../components/DishImage";
 
 export default function Category() {
-  const [data, setData] = useState([]);
-  const params = useParams();
+  const [data, setData] = useState<any>([]);
+  const params:any = useParams();
   useEffect(() => {
     if (data.length === 0) {
       RecipeFetchFunction(params.c).then(setData).then;
