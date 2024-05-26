@@ -15,7 +15,6 @@ export default function FetchRender() {
     return (
       <>
         <div>
-          <h1>Hello</h1>
           <CategoryMenu list={categories} />
         </div>
       </>

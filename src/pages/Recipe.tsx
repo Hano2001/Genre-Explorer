@@ -26,7 +26,7 @@ export default function Recipe() {
       <div>
         <h1>Recipe for: {data.strMeal}</h1>
         {ingredients.map((ing, index) => {
-            return <p>{measures[index]} {ing}</p>
+            return <p key={index}>{measures[index]} {ing}</p>
         })}
         <h3>{main.strInstructions}</h3>
         <Link to="/">Home</Link>
