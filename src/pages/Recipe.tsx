@@ -21,14 +21,25 @@ export default function Recipe() {
   } else {
     return (
       <div>
-        <h1>Recipe for: {data.strMeal}</h1>
-        {ingredients.map((ing: string, index: number) => {
-          return (
-            <p key={index}>
-              {measures[index]} {ing}
-            </p>
-          );
-        })}
+        <table>
+          <caption>Recipe for: {main.strMeal}</caption>
+          <thead>
+            <tr>
+              <th scope="col">Ingredient</th>
+              <th scope="col">Measure</th>
+            </tr>
+          </thead>
+          <tbody>
+            {ingredients.map((ing: string, index: number) => {
+              return (
+                <tr key={index}>
+                  <td scope="row">{ing}</td>
+                  <td scope="row">{measures[index]}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
         <h3>{main.strInstructions}</h3>
         <Link to="/">Home</Link>
       </div>
