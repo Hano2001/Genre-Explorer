@@ -14,7 +14,7 @@ function dataCleaner(obj: any) {
       if (x.includes("Ingredient") || x.includes("Measure")) {
         x.includes("Measure")
           ? measures.push(obj[x])
-          : ingredients.push(obj[x]);
+          : ingredients.push((obj[x]).charAt(0).toUpperCase() + obj[x].slice(1));
       } else {
         
         newRecipeObj[x] = obj[x]
