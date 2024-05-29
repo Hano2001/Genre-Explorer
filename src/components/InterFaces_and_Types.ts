@@ -1,6 +1,6 @@
-export  interface IValues {
-    name:string;
-    id:number
+export  interface Iparams {
+    c?:string,
+    i?:string
   };
 export type Tdata = Array<string>
 

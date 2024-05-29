@@ -1,15 +1,13 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { RecipeDetailsFetch } from "../components/fetch/Fetch";
-import {
-  IrecipeDetails,
-} from "../components/InterFaces_and_Types";
+import { Iparams, IrecipeDetails } from "../components/InterFaces_and_Types";
 
 export default function Recipe() {
   const [data, setData] = useState<IrecipeDetails | null>(null);
-  const params: any = useParams();
+  const params: Iparams = useParams();
   useEffect(() => {
-    if (data === null) {
+    if (data === null && params.i) {
       RecipeDetailsFetch(params.i).then(setData);
     }
   }, []);
