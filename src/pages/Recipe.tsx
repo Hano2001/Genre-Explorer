@@ -1,24 +1,27 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { RecipeDetailsFetch } from "../components/fetch/Fetch";
+import {
+  IrecipeDetails,
+} from "../components/InterFaces_and_Types";
 
 export default function Recipe() {
-  const [data, setData] = useState<any>([]);
+  const [data, setData] = useState<IrecipeDetails | null>(null);
   const params: any = useParams();
   useEffect(() => {
-    if (data.length === 0) {
+    if (data === null) {
       RecipeDetailsFetch(params.i).then(setData);
     }
   }, []);
 
-  const { main, ingredients, measures } = data;
-  if (data.length === 0) {
+  if (data === null) {
     return (
       <>
         <h3>Loading Recipe...</h3>
       </>
     );
   } else {
+    const { main, ingredients, measures } = data;
     return (
       <div>
         <table>

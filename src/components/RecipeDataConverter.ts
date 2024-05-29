@@ -19,7 +19,6 @@ function dataCleaner(obj: IRecipeObject) {
       }
     }
   });
-  console.log(newRecipeObj)
   return { main: newRecipeObj, ingredients: ingredients, measures: measures };
 }
 

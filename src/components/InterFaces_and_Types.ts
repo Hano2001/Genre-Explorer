@@ -17,4 +17,10 @@ export interface IcategoryMealObject {
   strMealThumb:string;
   idMeal:string
 }
+
+export interface IrecipeDetails {
+  main: Imain,
+  ingredients: Tdata,
+  measures: Tdata
+}
   // export type TJson Record<string;unknown>
