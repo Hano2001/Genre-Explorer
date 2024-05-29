@@ -20,24 +20,31 @@ export default function Recipe() {
     );
   } else {
     const { main, ingredients, measures } = data;
-    console.log(main.strMealThumb);
-    //const background = "bg-gradient-to-t"
-    //const background = `bg-[url('${main.strMealthumb}')]`
+    // const backGroundClass = `bg-[url(${main.strMealThumb})]`
+    const testStyles = {
+      "background-image":
+        `url('${main.strMealThumb}')`,
+    } as React.CSSProperties;
     return (
-      <div className="opacity-50">
+      // <div className={`bg-cover bg-[url(${main.strMealThumb})]`}>
+      <div className="bg-no-repeat h-full"style={testStyles}>
         <h1 className="text-center">Recipe for: {main.strMeal}</h1>
         <div className="flex flex-row mt-6">
           <h2 className="basis-1/2 text-center">Ingredients and Measures</h2>
           <h2 className="basis-1/2 text-center">Instructions</h2>
         </div>
-        
+
         <div className="flex flex-row">
           {/* <div className={`bg-[url('${main.strMealThumb}')]`}> */}
           <table className="border solid black align-center basis-1/2 px-8">
             <thead>
               <tr>
-                <th className="text-left" scope="col">Ingredient</th>
-                <th className="text-left" scope="col">Measure</th>
+                <th className="text-left" scope="col">
+                  Ingredient
+                </th>
+                <th className="text-left" scope="col">
+                  Measure
+                </th>
               </tr>
             </thead>
             <tbody>
@@ -51,8 +58,10 @@ export default function Recipe() {
               })}
             </tbody>
           </table>
-          
-          <span className="basis-1/2 break-after-column">{main.strInstructions}</span>
+
+          <span className="basis-1/2 whitespace-pre-wrap px-8">
+            {main.strInstructions}
+          </span>
         </div>
         <Link to="/">Home</Link>
 

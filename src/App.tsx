@@ -6,7 +6,7 @@ import Recipe from "./pages/Recipe.tsx";
 
 function App() {
   return (
-    <div className="h-full bg-lightyellow">
+    <div className="">
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/:c" element={<Category />}></Route>
