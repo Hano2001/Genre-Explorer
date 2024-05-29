@@ -5,19 +5,11 @@ export  interface IValues {
 export type Tdata = Array<string>
 
 export interface Imain  {
-  idMeal : string;
-  strMeal: string;
-  strCategory: string;
-  strArea: string;
-  strInstructions:string;
-  strMealThumb:string;
-  strTags:string;
-  strYoutube?: string;
-  strSource?:string
+  [index:string] : string;
 }
 
 export interface IRecipeObject {
-  [key:string] :string
+  [index:string| number] :string
 }
 
 export interface IcategoryMealObject {

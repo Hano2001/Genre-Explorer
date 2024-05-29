@@ -6,7 +6,7 @@ function dataCleaner(obj: IRecipeObject) {
   const ingredients: Tdata = [];
   const measures: Tdata = [];
 
-  Object.keys(obj).map((x:string) => {
+  Object.keys(obj).map((x) => {
     if (!checkArr.includes(obj[x])) {
       if (x.includes("Ingredient") || x.includes("Measure")) {
         x.includes("Measure")
@@ -19,7 +19,7 @@ function dataCleaner(obj: IRecipeObject) {
       }
     }
   });
-
+  console.log(newRecipeObj)
   return { main: newRecipeObj, ingredients: ingredients, measures: measures };
 }
 
