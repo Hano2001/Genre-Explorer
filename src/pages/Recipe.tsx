@@ -22,13 +22,15 @@ export default function Recipe() {
     const { main, ingredients, measures } = data;
     // const backGroundClass = `bg-[url(${main.strMealThumb})]`
     const testStyles = {
-      "background-image":
-        `url('${main.strMealThumb}')`,
+      "background-image": `url('${main.strMealThumb}')`,
     } as React.CSSProperties;
     return (
       // <div className={`bg-cover bg-[url(${main.strMealThumb})]`}>
-     
-      <div className="bg-cover bg-no-repeat h-full max-w-full"style={testStyles}>
+
+      <div
+        className="bg-cover bg-no-repeat h-full max-w-full"
+        style={testStyles}
+      >
         <h1 className="text-center">Recipe for: {main.strMeal}</h1>
         <div className="flex flex-row mt-6 z-1">
           <h2 className="basis-1/2 text-center">Ingredients and Measures</h2>
@@ -41,7 +43,7 @@ export default function Recipe() {
             <thead>
               <tr>
                 <th className="text-left" scope="col">
-                  Ingredient
+                  Ingredients
                 </th>
                 <th className="text-left" scope="col">
                   Measure
@@ -60,15 +62,13 @@ export default function Recipe() {
             </tbody>
           </table>
 
-          <span className="basis-1/2 whitespace-pre-wrap px-8">
+          <span className="mt-5 basis-1/2 whitespace-pre-wrap px-8">
             {main.strInstructions}
           </span>
         </div>
         <Link to="/">Home</Link>
 
-        <div className="bg-orange">
-          <p>test area</p>
-        </div>
+        <div className="bg-orange"></div>
       </div>
     );
   }

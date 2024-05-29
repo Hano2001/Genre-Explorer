@@ -6,7 +6,7 @@ import Recipe from "./pages/Recipe.tsx";
 
 function App() {
   return (
-    <div className="">
+    <div className="h-screen">
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/:c" element={<Category />}></Route>
