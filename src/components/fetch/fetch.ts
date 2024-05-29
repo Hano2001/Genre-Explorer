@@ -26,7 +26,6 @@ export async function RecipeFetchFunction(category:string) {
     return data
   });
   const randomIndex = Math.floor(Math.random() * result.meals.length);
-  console.log("RandomIndex:",randomIndex);
   return await result.meals[randomIndex];
 }
 

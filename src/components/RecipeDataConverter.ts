@@ -1,13 +1,10 @@
-import { Imain, Tdata } from "./InterFaces_and_Types";
+import { IRecipeObject, Imain, Tdata } from "./InterFaces_and_Types";
 
-function dataCleaner(obj: any) {
+function dataCleaner(obj: IRecipeObject) {
   const checkArr = [undefined, null, "", " "];
   const newRecipeObj: Imain = {} as Imain
   const ingredients: Tdata = [];
   const measures: Tdata = [];
-  // Object.keys(obj[0]).map(item => {  
-  //     console.log(item)
-  // })
 
   Object.keys(obj).map((x:string) => {
     if (!checkArr.includes(obj[x])) {

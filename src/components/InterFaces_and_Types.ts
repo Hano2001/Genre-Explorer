@@ -15,4 +15,8 @@ export interface Imain  {
   strYoutube?: string,
   strSource?:string
 }
+
+export interface IRecipeObject {
+  [key:string] :string
+}
   // export type TJson Record<string,unknown>
