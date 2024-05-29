@@ -5,8 +5,18 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
-    extend: {},
+    fontFamily:{
+      sans:[
+        "Georgia"
+      ]
+    },
+    colors:{
+      "orange": "#fc8803",
+      "gray" : "#85827f",
+      "lightyellow":"#f0d965"
+    }
   },
+  
   plugins: [],
 }
 
