@@ -27,16 +27,17 @@ export default function Recipe() {
     } as React.CSSProperties;
     return (
       // <div className={`bg-cover bg-[url(${main.strMealThumb})]`}>
-      <div className="bg-no-repeat h-full"style={testStyles}>
+     
+      <div className="bg-cover bg-no-repeat h-full max-w-full"style={testStyles}>
         <h1 className="text-center">Recipe for: {main.strMeal}</h1>
-        <div className="flex flex-row mt-6">
+        <div className="flex flex-row mt-6 z-1">
           <h2 className="basis-1/2 text-center">Ingredients and Measures</h2>
           <h2 className="basis-1/2 text-center">Instructions</h2>
         </div>
 
-        <div className="flex flex-row">
+        <div className=" border-4 border-blue-950 flex flex-row bg-light bg-opacity-50">
           {/* <div className={`bg-[url('${main.strMealThumb}')]`}> */}
-          <table className="border solid black align-center basis-1/2 px-8">
+          <table className="align-center basis-1/2 px-8">
             <thead>
               <tr>
                 <th className="text-left" scope="col">
