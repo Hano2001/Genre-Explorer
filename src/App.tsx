@@ -8,7 +8,7 @@ import Navbar from "./components/Navbar.tsx";
 function App() {
   return (
     <div className="flex justify-center bg-gray h-screen">
-      <div className="w-5/6 justify-center h-5/6 mt-10 bg-lightyellow bg-cover">
+      <div className="w-5/6 justify-center h-5/6 mt-10 bg-lightyellow bg-cover overflow-hidden">
         <Navbar />
         <div className="overflow-scroll h-full ">
           <Routes>

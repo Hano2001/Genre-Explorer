@@ -32,8 +32,8 @@ export default function Recipe() {
           <h2 className="basis-1/2 text-center">Instructions</h2>
         </div>
 
-        <div className=" border-4 border-blue-950 flex flex-row bg-light bg-opacity-50 h-full">
-          <table className="align-center basis-1/2 px-8">
+        <div className=" border-4 border-blue-950 flex flex-row bg-light bg-opacity-50 h-[95%]">
+          <table className="align-center basis-1/2 h-[90%]">
             <thead>
               <tr>
                 <th className="text-left" scope="col">
