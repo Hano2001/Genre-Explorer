@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <div>
+    <div className="bg-black h-10">
       <footer>
-        <GitHub>
+        <GitHub style={{color: "white"}}>
           <Link to="https://github.com/Hano2001/Recipe-Explorer" />
         </GitHub>
       </footer>

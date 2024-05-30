@@ -6,6 +6,7 @@ export default {
       sans: ["Georgia"],
     },
     colors: {
+      black:"#000000",
       orange: "#fc8803",
       gray: "#85827f",
       lightyellow: "#f0d965",
