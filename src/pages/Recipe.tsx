@@ -20,6 +20,7 @@ export default function Recipe() {
     );
   } else {
     const { main, ingredients, measures } = data;
+    console.log(params)
     const backgroundStyles = {
       "background-image": `url('${main.strMealThumb}')`,
     } as React.CSSProperties;
