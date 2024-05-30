@@ -16,13 +16,13 @@ export default function Navbar() {
 
   return (
     <div>
-      <nav className="bg-orange h-10 w-full overflow-hidden">
+      <nav className="bg-black h-10 w-full overflow-hidden">
         <ol className="flex justify-between">
           {links.map((link) => {
             return (
               <li>
                 <Link
-                  className="p-2 rounded-md text-light hover:bg-light hover:text-orange"
+                  className="p-2 rounded-md text-light hover:bg-light hover:text-black"
                   to={link.link}
                 >
                   {link.name}
