@@ -5,9 +5,9 @@ import { RandomRecipeFetch } from "../components/fetch/Fetch";
 
 export default function Random() {
   const [data, setData] = useState<IrecipeDetails | null>(null);
+  console.log("Testing");
   useEffect(() => {
     if (data === null) {
-      console.log("empty");
       RandomRecipeFetch().then(setData);
     }
   }, []);

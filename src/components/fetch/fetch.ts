@@ -15,13 +15,15 @@ export default async function CategoryFetchFunction() {
 
 export async function RecipeFetchFunction(category: string) {
   const result = await fetch(
-    `https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`
+    `https://www.themealdb.com/api/json/v1/1/random.php/filter.php?c=${category}`
   )
     .then((response) => response.json())
     .then((data) => {
+      console.log(data)
       return data;
     });
   const randomIndex = Math.floor(Math.random() * result.meals.length);
+  console.log(result)
   return await result.meals[randomIndex];
 }
 
