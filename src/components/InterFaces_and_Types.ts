@@ -23,4 +23,7 @@ export interface IrecipeDetails {
   ingredients: Tdata,
   measures: Tdata
 }
-  // export type TJson Record<string;unknown>
+ export interface InavBarLinks {
+  name:string,
+  link:string
+ }
