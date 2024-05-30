@@ -20,13 +20,13 @@ export default function Category() {
   const recipeEndpoint = "/recipe/" + data?.idMeal;
 
   return (
-    <div>
+    <div className="h-full">
       <h1>Here is your random Recipe! Happy Cooking!</h1>
       <h2>{data?.strMeal}</h2>
       <button onClick={FetchNewRecipe}>Generate new Recipe</button>
+      <button><Link to={recipeEndpoint}>Recipe Details</Link></button>
       <DishImage imgUrl={data?.strMealThumb!}/>
-      <Link to={recipeEndpoint}>Recipe Details</Link>
-      <Link to="/">Back to Categories</Link>
+      
     </div>
   );
 }

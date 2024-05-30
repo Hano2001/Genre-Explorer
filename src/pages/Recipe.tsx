@@ -21,23 +21,20 @@ export default function Recipe() {
   } else {
     const { main, ingredients, measures } = data;
     // const backGroundClass = `bg-[url(${main.strMealThumb})]`
-    const testStyles = {
+    const backgroundStyles = {
       "background-image": `url('${main.strMealThumb}')`,
     } as React.CSSProperties;
     return (
       // <div className={`bg-cover bg-[url(${main.strMealThumb})]`}>
 
-      <div
-        className="bg-cover bg-no-repeat h-full max-w-full"
-        style={testStyles}
-      >
+      <div className="bg-cover bg-no-repeat h-full" style={backgroundStyles}>
         <h1 className="text-center">Recipe for: {main.strMeal}</h1>
         <div className="flex flex-row mt-6 z-1">
           <h2 className="basis-1/2 text-center">Ingredients and Measures</h2>
           <h2 className="basis-1/2 text-center">Instructions</h2>
         </div>
 
-        <div className=" border-4 border-blue-950 flex flex-row bg-light bg-opacity-50">
+        <div className=" border-4 border-blue-950 flex flex-row bg-light bg-opacity-50 h-full">
           {/* <div className={`bg-[url('${main.strMealThumb}')]`}> */}
           <table className="align-center basis-1/2 px-8">
             <thead>
