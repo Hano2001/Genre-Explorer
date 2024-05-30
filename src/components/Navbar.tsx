@@ -10,7 +10,7 @@ export default function Navbar() {
     },
     {
       name: "Random Recipe",
-      link: "/recipe/random",
+      link: "/random",
     },
   ];
 

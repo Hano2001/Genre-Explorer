@@ -26,14 +26,23 @@ export async function RecipeFetchFunction(category: string) {
 }
 
 export async function RecipeDetailsFetch(id: string) {
-  const fetchUrl =
-    id === "random"
-      ? "https://www.themealdb.com/api/json/v1/1/random.php"
-      : `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`;
-  const result = await fetch(fetchUrl)
+  const result = await fetch(
+    `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`
+  )
     .then((response) => response.json())
     .then((data) => {
       return data;
     });
-  return await RecipeDataConverter(result.meals[0]);
+  return RecipeDataConverter(result.meals[0]);
+}
+
+export async function RandomRecipeFetch() {
+  const result = await fetch(
+    "https://www.themealdb.com/api/json/v1/1/random.php"
+  )
+    .then((response) => response.json())
+    .then((data) => {
+      return data;
+    });
+  return RecipeDataConverter(result.meals[0]);
 }

@@ -5,6 +5,7 @@ import Category from "./pages/Category.tsx";
 import Recipe from "./pages/Recipe.tsx";
 import Navbar from "./components/Navbar.tsx";
 import Footer from "./components/Footer.tsx";
+import Random from "./pages/Random.tsx";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <div className="h-full ">
           <Routes>
             <Route path="/" element={<Home />}></Route>
+            <Route path="/random" element={<Random />}></Route>
             <Route path="/:c" element={<Category />}></Route>
             <Route path="/recipe/:i" element={<Recipe />}></Route>
           </Routes>
