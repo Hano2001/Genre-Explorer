@@ -33,7 +33,6 @@ export async function RecipeDetailsFetch(id: string) {
   const result = await fetch(fetchUrl)
     .then((response) => response.json())
     .then((data) => {
-      console.log(data)
       return data;
     });
   return await RecipeDataConverter(result.meals[0]);

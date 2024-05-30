@@ -18,9 +18,9 @@ export default function Navbar() {
     <div>
       <nav className="bg-black h-10 w-full overflow-hidden">
         <ol className="flex justify-between">
-          {links.map((link) => {
+          {links.map((link, index:number) => {
             return (
-              <li>
+              <li key={index}>
                 <Link
                   className="p-2 rounded-md text-light hover:bg-light hover:text-black"
                   to={link.link}
