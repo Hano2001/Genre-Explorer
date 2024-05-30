@@ -66,7 +66,6 @@ export default function Recipe() {
             {main.strInstructions}
           </span>
         </div>
-        <Link to="/">Home</Link>
 
         <div className="bg-orange"></div>
       </div>
