@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { RecipeFetchFunction } from "../components/fetch/Fetch";
 import DishImage from "../components/DishImage";
-import { IcategoryMealObject, Imain } from "../components/InterFaces_and_Types";
+import { Imain } from "../components/InterFaces_and_Types";
 
 export default function Category() {
   const [data, setData] = useState<Imain | null>(null);
@@ -18,13 +18,13 @@ export default function Category() {
   }
 
   const recipeEndpoint = "/recipe/" + data?.idMeal;
-  console.log(data)
 
   return (
     <div className="grid grid-rows-3 grid-flow-col gap-4">
       <DishImage imgUrl={data?.strMealThumb!} />
       <div className="col-span-2">
-        <h1> Here you go, {data?.strMeal}, a {data?.strCategory} dish from {data?.strArea}</h1>
+        <h1>Random {params.c} dish</h1>
+        <h1> Here you go, {data?.strMeal}</h1>
       </div>
       <div className="row-span-2 col-span-2">
         <div className="flex flex-row">
