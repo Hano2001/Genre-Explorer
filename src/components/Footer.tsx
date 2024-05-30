@@ -16,6 +16,7 @@ export default function Footer() {
             }}
           />
         </Link>
+        <p className="text-white">Made by Hano2001</p>
       </footer>
     </div>
   );
