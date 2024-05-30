@@ -20,20 +20,20 @@ export default function Recipe() {
     );
   } else {
     const { main, ingredients, measures } = data;
-    console.log(params)
+    console.log(main.strInstructions)
     const backgroundStyles = {
       "background-image": `url('${main.strMealThumb}')`,
     } as React.CSSProperties;
     return (
-      <div className="bg-cover bg-no-repeat h-full" style={backgroundStyles}>
+      <div className="bg-cover bg-no-repeat h-full overflow-y-auto" style={backgroundStyles}>
         <h1 className="text-center">Recipe for: {main.strMeal}</h1>
         <div className="flex flex-row mt-6 z-1">
           <h2 className="basis-1/2 text-center">Ingredients and Measures</h2>
           <h2 className="basis-1/2 text-center">Instructions</h2>
         </div>
 
-        <div className=" border-4 border-blue-950 flex flex-row bg-light bg-opacity-50 h-[95%]">
-          <table className="align-center basis-1/2 h-[90%]">
+        <div className="flex flex-row bg-light bg-opacity-50">
+          <table className="align-center basis-1/3 h-[90%]">
             <thead>
               <tr>
                 <th className="text-left" scope="col">
@@ -56,7 +56,7 @@ export default function Recipe() {
             </tbody>
           </table>
 
-          <span className="mt-5 basis-1/2 whitespace-pre-wrap px-8">
+          <span className="mt-2 basis-2/3 whitespace-pre-wrap px-3 mb-5">
             {main.strInstructions}
           </span>
         </div>
