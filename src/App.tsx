@@ -8,14 +8,18 @@ import Navbar from "./components/Navbar.tsx";
 function App() {
   return (
     <div className="flex justify-center bg-gray h-screen">
-      <div className="bg-light h-[90%] w-5/6 justify-center overflow-scroll">
-        <Navbar />
+      <div className="bg-light w-5/6 justify-center h-5/6 mt-10">
+          <Navbar />
+        <div className="overflow-scroll h-full ">
+
+        
+      
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/:c" element={<Category />}></Route>
           <Route path="/recipe/:i" element={<Recipe />}></Route>
         </Routes>
-      </div>
+      </div></div>
     </div>
   );
 }

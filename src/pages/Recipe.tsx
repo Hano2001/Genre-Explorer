@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import {useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { RecipeDetailsFetch } from "../components/fetch/Fetch";
 import { Iparams, IrecipeDetails } from "../components/InterFaces_and_Types";
 
@@ -24,8 +24,6 @@ export default function Recipe() {
       "background-image": `url('${main.strMealThumb}')`,
     } as React.CSSProperties;
     return (
-      // <div className={`bg-cover bg-[url(${main.strMealThumb})]`}>
-
       <div className="bg-cover bg-no-repeat h-full" style={backgroundStyles}>
         <h1 className="text-center">Recipe for: {main.strMeal}</h1>
         <div className="flex flex-row mt-6 z-1">
@@ -34,7 +32,6 @@ export default function Recipe() {
         </div>
 
         <div className=" border-4 border-blue-950 flex flex-row bg-light bg-opacity-50 h-full">
-          {/* <div className={`bg-[url('${main.strMealThumb}')]`}> */}
           <table className="align-center basis-1/2 px-8">
             <thead>
               <tr>

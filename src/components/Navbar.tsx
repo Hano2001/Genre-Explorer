@@ -8,11 +8,15 @@ export default function Navbar() {
       name: "Home",
       link: "/",
     },
+    {
+        name:"Random Recipe",
+        link:"/random"
+    }
   ];
   return (
-    <div>
-      <nav className="bg-orange">
-        <ol className="grid grid-cols-3">
+    <div >
+      <nav className="bg-orange  h-10 w-full">
+        <ol className="flex justify-between">
           {links.map((link) => {
             return (
               <li>
