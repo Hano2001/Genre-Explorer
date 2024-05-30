@@ -6,7 +6,7 @@ import { IcategoryMealObject } from "../components/InterFaces_and_Types";
 
 export default function Category() {
   const [data, setData] = useState<IcategoryMealObject | null>(null);
-  const params:any = useParams();
+  const params: any = useParams();
   useEffect(() => {
     if (data === null) {
       RecipeFetchFunction(params.c).then(setData).then;
@@ -24,9 +24,10 @@ export default function Category() {
       <h1>Here is your random Recipe! Happy Cooking!</h1>
       <h2>{data?.strMeal}</h2>
       <button onClick={FetchNewRecipe}>Generate new Recipe</button>
-      <button><Link to={recipeEndpoint}>Recipe Details</Link></button>
-      <DishImage imgUrl={data?.strMealThumb!}/>
-      
+      <button>
+        <Link to={recipeEndpoint}>Recipe Details</Link>
+      </button>
+      <DishImage imgUrl={data?.strMealThumb!} />
     </div>
   );
 }

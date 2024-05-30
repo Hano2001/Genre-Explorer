@@ -1,15 +1,15 @@
-import{ useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Imain } from "./InterFaces_and_Types";
 
 export default function CategoryMenu({ list }: any) {
   const [selected, setSelected] = useState("x");
 
   useEffect(() => {
-    if(selected !== "x") {
-      console.log(selected)
-      window.location.href=`/${selected}`
+    if (selected !== "x") {
+      console.log(selected);
+      window.location.href = `/${selected}`;
     }
-  },[selected])
+  }, [selected]);
   return (
     <>
       <label htmlFor="categories">Choose a category:</label>
@@ -20,13 +20,14 @@ export default function CategoryMenu({ list }: any) {
       >
         <option value="x">-</option>
 
-        {list.map((category: any) => {
+        {list.map((category: Imain) => {
           return (
-            <option key={category.idCategory} value={category.strCategory}>{category.strCategory}</option>
+            <option key={category.idCategory} value={category.strCategory}>
+              {category.strCategory}
+            </option>
           );
         })}
       </select>
-      {/* <Link to={`/${selected}`}>Enter</Link> */}
     </>
   );
 }

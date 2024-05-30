@@ -1,5 +1,3 @@
-import FetchRender from "../components/FetchRender";
-
 export default function Home() {
   return (
     <>

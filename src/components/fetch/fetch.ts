@@ -1,11 +1,7 @@
 import RecipeDataConverter from "../RecipeDataConverter";
 
 export default async function CategoryFetchFunction() {
-  //const result = "Harald"
-
-  // Recipe api: www.themealdb.com/api/json/v1/1/categories.php
   const result = await fetch(
-    //"https://randomuser.me/api/?results=30"
     "https://www.themealdb.com/api/json/v1/1/categories.php"
   )
     .then((response) => response.json())
@@ -37,5 +33,3 @@ export async function RecipeDetailsFetch(id:string) {
   })
   return await RecipeDataConverter(result.meals[0]);
 }
-
-//module.exports = CategoryFetchFunction;

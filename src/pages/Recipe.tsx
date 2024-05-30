@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import {useParams } from "react-router-dom";
 import { RecipeDetailsFetch } from "../components/fetch/Fetch";
 import { Iparams, IrecipeDetails } from "../components/InterFaces_and_Types";
 
@@ -20,7 +20,6 @@ export default function Recipe() {
     );
   } else {
     const { main, ingredients, measures } = data;
-    // const backGroundClass = `bg-[url(${main.strMealThumb})]`
     const backgroundStyles = {
       "background-image": `url('${main.strMealThumb}')`,
     } as React.CSSProperties;

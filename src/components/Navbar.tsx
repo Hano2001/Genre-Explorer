@@ -1,8 +1,6 @@
-import React from "react";
 import FetchRender from "./FetchRender";
 import { Link } from "react-router-dom";
 import { InavBarLinks } from "./InterFaces_and_Types";
-import CategoryMenu from "./CategoryMenu";
 
 export default function Navbar() {
   const links: InavBarLinks[] = [
