@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <div className="bg-black h-10">
+    <div className="bg-black h-10 mb-2 flex-end ">
       <footer>
         <Link to="https://github.com/Hano2001/Recipe-Explorer">
           <GitHub
