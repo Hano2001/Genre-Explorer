@@ -1,7 +1,6 @@
 import FetchRender from "./FetchRender";
 import { Link, useLocation } from "react-router-dom";
 import { InavBarLinks } from "./InterFaces_and_Types";
-import { useEffect, useState } from "react";
 
 export default function Navbar() {
   const location = useLocation();

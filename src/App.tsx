@@ -10,7 +10,7 @@ import Random from "./pages/Random.tsx";
 function App() {
   return (
     <div className="flex flex-col justify-center  h-screen bg-black">
-      <div className="w-5/6 h-5/6 self-center bg-lightyellow">
+      <div className="w-5/6 h-5/6 self-center">
         <Navbar />
         <div className="h-full ">
           <Routes>

@@ -3,6 +3,13 @@
     html{
         @apply font-sans
     }
+    h1,h2,h3,h4,h5,h6,button,label{
+        @apply text-white
+    }
+    button{
+        @apply hover:animate-bounce hover:bg-white hover:text-black
+        
+    }
 }
 @tailwind components;
 @tailwind utilities;
