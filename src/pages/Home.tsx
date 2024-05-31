@@ -5,7 +5,6 @@ export default function Home() {
         <h1 className="text-2xl font-bold text-center">
           Recipes for the uninspired!
         </h1>
-        <div></div>
       </div>
     </>
   );

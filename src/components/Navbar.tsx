@@ -1,8 +1,11 @@
 import FetchRender from "./FetchRender";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { InavBarLinks } from "./InterFaces_and_Types";
+import { useEffect, useState } from "react";
 
 export default function Navbar() {
+  const location = useLocation();
+
   const links: InavBarLinks[] = [
     {
       name: "Home",
@@ -10,7 +13,10 @@ export default function Navbar() {
     },
     {
       name: "Random Recipe",
-      link: "/random",
+      link:
+        location.pathname === "/random"
+          ? "javascript:window.location.reload()"
+          : "/random",
     },
   ];
 
@@ -18,7 +24,7 @@ export default function Navbar() {
     <div>
       <nav className="bg-black h-10 w-full overflow-hidden">
         <ol className="flex justify-between">
-          {links.map((link, index:number) => {
+          {links.map((link, index: number) => {
             return (
               <li key={index}>
                 <Link
