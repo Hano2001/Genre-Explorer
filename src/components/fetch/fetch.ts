@@ -7,7 +7,6 @@ export default async function CategoryFetchFunction() {
     .then((response) => response.json())
     .then((data) => {
       return data.categories;
-      //element.textContent = data.results.length;
     });
 
   return await result;
