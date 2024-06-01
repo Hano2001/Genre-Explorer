@@ -30,13 +30,20 @@ export default function Category() {
         <div className="flex flex-row">
           <div className="grid p-3">
             <label htmlFor="new">Not happy?</label>
-            <button id="new" onClick={FetchNewRecipe}>
+            <button
+              className="hover:animate-bounce hover:bg-white hover:text-black"
+              id="new"
+              onClick={FetchNewRecipe}
+            >
               Generate new Recipe
             </button>
           </div>
           <div className="grid p-3">
             <label htmlFor="details">Interested?</label>
-            <button id="details">
+            <button
+              id="details"
+              className="hover:animate-bounce hover:bg-white hover:text-black"
+            >
               <Link to={recipeEndpoint}>Recipe Details</Link>
             </button>
           </div>

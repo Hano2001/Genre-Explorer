@@ -1,15 +1,19 @@
 @tailwind base;
-@layer base{
-    html{
-        @apply font-sans
-    }
-    h1,h2,h3,h4,h5,h6,button,label,p{
-        @apply text-white
-    }
-    button{
-        @apply hover:animate-bounce hover:bg-white hover:text-black
-        
-    }
+@layer base {
+  html {
+    @apply font-sans;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  button,
+  label,
+  p {
+    @apply text-white;
+  }
 }
 @tailwind components;
 @tailwind utilities;
