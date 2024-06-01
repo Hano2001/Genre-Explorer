@@ -24,7 +24,7 @@ export default function RecipeRender(props: {
       style={backgroundStyles}
     >
       <div className="bg-black">
-        <h1 className="text-center font-bold">{(main.strMeal).toUpperCase()}</h1>
+        <h1 className="text-center font-bold">{main.strMeal.toUpperCase()}</h1>
         <h1 className="text-center">{descriptionString}</h1>
         {main.strYoutube ? <YoutubeRender id={youtubeID} /> : ""}
       </div>
@@ -32,7 +32,6 @@ export default function RecipeRender(props: {
         <h2 className="basis-1/2 text-center">Ingredients and Measures</h2>
         <h2 className="basis-1/2 text-center">Instructions</h2>
       </div>
-
       <div className="flex flex-row bg-light bg-opacity-50">
         <table className="align-center basis-1/3 h-[90%]">
           <thead>
@@ -56,13 +55,10 @@ export default function RecipeRender(props: {
             })}
           </tbody>
         </table>
-
         <span className="mt-2 basis-2/3 whitespace-pre-wrap px-3 mb-5">
           {main.strInstructions}
         </span>
       </div>
-
-      <div className="bg-orange"></div>
     </div>
   );
 }
