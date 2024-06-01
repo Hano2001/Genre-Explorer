@@ -1,13 +1,23 @@
-import React from "react";
+import React, { createRef, useEffect, useState } from "react";
 import { Imain, Tdata } from "./InterFaces_and_Types";
 import YoutubeRender from "./YoutubeRender";
 import DishImage from "./DishImage";
 
-export default function RecipeRender(props: {
-  main: Imain;
-  ingredients: Tdata;
-  measures: Tdata;
-}) {
+export default function RecipeRender(
+  this: any,
+  props: {
+    main: Imain;
+    ingredients: Tdata;
+    measures: Tdata;
+  }
+) {
+  const [scrollDown, setScrollDown] = useState(false);
+
+  function ScrollDown(props: any) {
+    const { scrollTop, offsetHeight, scrollHeight } = props;
+
+    setScrollDown(scrollTop === scrollHeight - offsetHeight);
+  }
   const { main, ingredients, measures } = props;
   const vowels = "AEIOU";
   const article = vowels.includes(main.strArea[0]) ? "An" : "A";
@@ -26,6 +36,7 @@ export default function RecipeRender(props: {
     >
       <div className="bg-black">
         <h1 className="text-center font-bold">{main.strMeal.toUpperCase()}</h1>
+        <h1>{scrollDown ? "True" : "False"}</h1>
         <h1 className="text-center">{descriptionString}</h1>
         {main.strYoutube ? <YoutubeRender id={youtubeID} /> : ""}
       </div>
@@ -57,13 +68,16 @@ export default function RecipeRender(props: {
             })}
           </tbody>
         </table>
+        <div
+          onScroll={(e) => ScrollDown(e.target)}
+          id="scrollDiv"
+          className="mt-2 h-[75%] basis-1/3 whitespace-pre-line px-3 mb-5 overflow-scroll no-scrollbar"
+        >
+          <span>{main.strInstructions}</span>
+        </div>
 
-        <span className="mt-2 h-[75%] basis-1/3 whitespace-pre-line px-3 mb-5 overflow-scroll no-scrollbar">
-          {main.strInstructions}
-        </span>
-        <DishImage imgUrl={main.strMealThumb}/>
+        <DishImage imgUrl={main.strMealThumb} />
       </div>
-   
     </div>
   );
 }
