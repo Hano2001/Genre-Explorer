@@ -9,6 +9,7 @@ export default function YoutubeRender(props: { id: string }) {
 
   return (
     <>
+    <h2>Youtube Tutorial: </h2>
       <button onClick={() => setHidden(!hidden)}>
         <YoutubeIcon
           sx={{
