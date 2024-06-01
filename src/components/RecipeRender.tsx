@@ -21,7 +21,7 @@ export default function RecipeRender(props: {
 
   return (
     <div
-      className="bg-cover bg-no-repeat h-full overflow-y-auto"
+      className="bg-cover bg-no-repeat h-full overflow-hidden"
       style={backgroundStyles}
     >
       <div className="bg-black">
@@ -34,8 +34,8 @@ export default function RecipeRender(props: {
         <h2 className="basis-1/3 text-center">Instructions</h2>
         <h2 className="basis-1/3 text-center">Looks good eh?</h2>
       </div>
-      <div className="flex flex-row bg-light bg-opacity-50 h-full">
-        <table className="align-center basis-1/3 h-[90%]">
+      <div className="flex flex-row bg-light bg-opacity-50 h-full overflow-hidden">
+        <table className="align-center basis-2/6 h-[75%]">
           <thead>
             <tr>
               <th className="text-left" scope="col">
@@ -58,7 +58,7 @@ export default function RecipeRender(props: {
           </tbody>
         </table>
 
-        <span className="mt-2 basis-1/3 whitespace-pre-line px-3 mb-5">
+        <span className="mt-2 h-[75%] basis-1/3 whitespace-pre-line px-3 mb-5 overflow-scroll no-scrollbar">
           {main.strInstructions}
         </span>
         <DishImage imgUrl={main.strMealThumb}/>
