@@ -1,5 +1,6 @@
 import React from "react";
 import { Imain, Tdata } from "./InterFaces_and_Types";
+import { Link } from "react-router-dom";
 
 export default function RecipeRender(props: {
   main: Imain;
@@ -13,6 +14,8 @@ export default function RecipeRender(props: {
   const backgroundStyles = {
     backgroundImage: `url('${main.strMealThumb}')`,
   } as React.CSSProperties;
+
+
   return (
     <div
       className="bg-cover bg-no-repeat h-full overflow-y-auto"
@@ -21,6 +24,7 @@ export default function RecipeRender(props: {
       <div className="bg-black">
         <h1 className="text-center">{main.strMeal}</h1>
         <h1 className="text-center">{descriptionString}</h1>
+        {main.strYoutube ? <Link to={main.strYoutube}>Youtube</Link> : ""}
       </div>
       <div className="flex flex-row mt-6 z-1">
         <h2 className="basis-1/2 text-center">Ingredients and Measures</h2>
