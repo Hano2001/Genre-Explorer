@@ -1,10 +1,16 @@
-import React from 'react'
-import YouTube from 'react-youtube'
+import React, { useState } from "react";
+import YouTube from "react-youtube";
 
-export default function YoutubeRender(props:{id:string}) {
+export default function YoutubeRender(props: { id: string }) {
+  const [hidden, setHidden] = useState<Boolean>(true);
+  let classString = hidden ? "invisible" : "visible";
+  classString += " z-40 absolute";
   return (
-    <div>
-        <YouTube videoId={props.id}/>
-    </div>
-  )
+    <>
+      <button onClick={() => setHidden(!hidden)}>Show</button>
+      <div className={classString}>
+        <YouTube videoId={props.id} />
+      </div>
+    </>
+  );
 }
