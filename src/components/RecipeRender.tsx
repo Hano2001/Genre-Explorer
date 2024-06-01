@@ -1,7 +1,5 @@
 import React from "react";
 import { Imain, Tdata } from "./InterFaces_and_Types";
-import { Link } from "react-router-dom";
-import YouTube from "react-youtube";
 import YoutubeRender from "./YoutubeRender";
 
 export default function RecipeRender(props: {
@@ -16,8 +14,10 @@ export default function RecipeRender(props: {
   const backgroundStyles = {
     backgroundImage: `url('${main.strMealThumb}')`,
   } as React.CSSProperties;
-  const youtubeID = main.strYoutube ? main.strYoutube.slice(main.strYoutube.indexOf("=")+1) : "";
- 
+  const youtubeID = main.strYoutube
+    ? main.strYoutube.slice(main.strYoutube.indexOf("=") + 1)
+    : "";
+
   return (
     <div
       className="bg-cover bg-no-repeat h-full overflow-y-auto"
@@ -26,9 +26,9 @@ export default function RecipeRender(props: {
       <div className="bg-black">
         <h1 className="text-center">{main.strMeal}</h1>
         <h1 className="text-center">{descriptionString}</h1>
-        {main.strYoutube ? <YoutubeRender id={youtubeID}/>: ""}
+        {main.strYoutube ? <YoutubeRender id={youtubeID} /> : ""}
       </div>
-      <div className="flex flex-row mt-6 z-1">
+      <div className="flex flex-row mt-6 z-1 bg-black mt-0">
         <h2 className="basis-1/2 text-center">Ingredients and Measures</h2>
         <h2 className="basis-1/2 text-center">Instructions</h2>
       </div>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import YouTube from "react-youtube";
 
 export default function YoutubeRender(props: { id: string }) {
