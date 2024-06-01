@@ -8,7 +8,7 @@ export default {
     colors: {
       black:"#000000",
       orange: "#fc8803",
-      gray: "#85827f",
+      gray: "#917d7c",
       lightyellow: "#f0d965",
       light: "#f7f4e1",
       white: "#FFFFFF"

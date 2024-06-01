@@ -7,6 +7,9 @@ export default function RecipeRender(props: {
   measures: Tdata;
 }) {
   const { main, ingredients, measures } = props;
+  const vowels = "AEIOU";
+  const article = vowels.includes(main.strArea[0]) ? "An" : "A";
+  const descriptionString = `${article} ${main.strArea} ${main.strCategory} dish!`;
   const backgroundStyles = {
     backgroundImage: `url('${main.strMealThumb}')`,
   } as React.CSSProperties;
@@ -15,7 +18,10 @@ export default function RecipeRender(props: {
       className="bg-cover bg-no-repeat h-full overflow-y-auto"
       style={backgroundStyles}
     >
-      <h1 className="text-center">Recipe for: {main.strMeal}</h1>
+      <div className="bg-black">
+        <h1 className="text-center">{main.strMeal}</h1>
+        <h1 className="text-center">{descriptionString}</h1>
+      </div>
       <div className="flex flex-row mt-6 z-1">
         <h2 className="basis-1/2 text-center">Ingredients and Measures</h2>
         <h2 className="basis-1/2 text-center">Instructions</h2>
