@@ -21,7 +21,7 @@ export default function Navbar() {
 
   return (
     <div>
-      <nav className="bg-black h-10 w-full overflow-hidden">
+      <nav className="bg-black h-10 w-full overflow-hidden ">
         <ol className="flex justify-between">
           {links.map((link, index: number) => {
             return (

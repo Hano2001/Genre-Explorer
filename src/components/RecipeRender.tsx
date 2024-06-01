@@ -24,11 +24,11 @@ export default function RecipeRender(props: {
       style={backgroundStyles}
     >
       <div className="bg-black">
-        <h1 className="text-center">{main.strMeal}</h1>
+        <h1 className="text-center font-bold">{(main.strMeal).toUpperCase()}</h1>
         <h1 className="text-center">{descriptionString}</h1>
         {main.strYoutube ? <YoutubeRender id={youtubeID} /> : ""}
       </div>
-      <div className="flex flex-row mt-6 z-1 bg-black mt-0">
+      <div className="flex flex-row bg-black">
         <h2 className="basis-1/2 text-center">Ingredients and Measures</h2>
         <h2 className="basis-1/2 text-center">Instructions</h2>
       </div>
