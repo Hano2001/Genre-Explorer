@@ -12,7 +12,7 @@ export default function CategoryMenu({ list }: any) {
   }, [selected]);
   return (
     <>
-      <label htmlFor="categories">Choose a category:</label>
+      <label htmlFor="categories">Choose a category: </label>
       <select
         name="categories"
         id="categories"

@@ -1,6 +1,7 @@
 import React from "react";
 import { Imain, Tdata } from "./InterFaces_and_Types";
 import YoutubeRender from "./YoutubeRender";
+import DishImage from "./DishImage";
 
 export default function RecipeRender(props: {
   main: Imain;
@@ -29,10 +30,11 @@ export default function RecipeRender(props: {
         {main.strYoutube ? <YoutubeRender id={youtubeID} /> : ""}
       </div>
       <div className="flex flex-row bg-black">
-        <h2 className="basis-1/2 text-center">Ingredients and Measures</h2>
-        <h2 className="basis-1/2 text-center">Instructions</h2>
+        <h2 className="basis-1/3 text-center">Ingredients and Measures</h2>
+        <h2 className="basis-1/3 text-center">Instructions</h2>
+        <h2 className="basis-1/3 text-center">Looks good eh?</h2>
       </div>
-      <div className="flex flex-row bg-light bg-opacity-50">
+      <div className="flex flex-row bg-light bg-opacity-50 h-full">
         <table className="align-center basis-1/3 h-[90%]">
           <thead>
             <tr>
@@ -55,10 +57,13 @@ export default function RecipeRender(props: {
             })}
           </tbody>
         </table>
-        <span className="mt-2 basis-2/3 whitespace-pre-wrap px-3 mb-5">
+
+        <span className="mt-2 basis-1/3 whitespace-pre-line px-3 mb-5">
           {main.strInstructions}
         </span>
+        <DishImage imgUrl={main.strMealThumb}/>
       </div>
+   
     </div>
   );
 }
