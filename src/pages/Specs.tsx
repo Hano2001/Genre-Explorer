@@ -5,37 +5,37 @@ export default function Specs() {
     {
       dep: "Jest",
       desc: "Function testing",
-      link: "https://jestjs.io/",
+      url: "https://jestjs.io/",
     },
     {
       dep: "Babel",
       desc: "Parser to make Jest work with TS",
-      link: "https://babeljs.io/",
+      url: "https://babeljs.io/",
     },
     {
       dep: "Material UI",
       desc: "Used for icons",
-      link: "https://mui.com/",
+      url: "https://mui.com/",
     },
     {
       dep: "React-router-dom",
       desc: "Used for routes, Links and window-location",
-      link: "https://reactrouter.com",
+      url: "https://reactrouter.com",
     },
     {
       dep: "React-Youtube",
       desc: "Used for enabling youtube videos in the app",
-      link: "https://www.npmjs.com/package/react-youtube",
+      url: "https://www.npmjs.com/package/react-youtube",
     },
     {
       dep: "TailwindCSS",
       desc: "Cascading Style Sheets Framework",
-      link: "https://tailwindcss.com/",
+      url: "https://tailwindcss.com/",
     },
     {
       dep: "TheMealDB",
       desc: "The API I build this app around.",
-      Link: "https://www.themealdb.com/api.php",
+      url: "https://www.themealdb.com/api.php",
     },
   ];
   return (
@@ -47,7 +47,7 @@ export default function Specs() {
         <span className="text-center whitespace-pre-line">
           I made this app using React Vite TypeScript, my initial intention for
           this app, was to make a music app. That also randomized depending on
-          chosen category, but in that case, I would be genre, and instead of
+          chosen category, but in that case, it would be genre, and instead of
           recipe, it would be band or artist. But during this interesting
           process of making this recipe app, I learned something that every
           developer should know; If you plan on coding an app around an API,
@@ -75,7 +75,7 @@ export default function Specs() {
             </thead>
             <tbody className="w-full">
               {appSpecs.map(
-                (spec: { dep: string; desc: string; link: string }) => {
+                (spec: { dep: string; desc: string; url: string; }) => {
                   return (
                     <tr className="border border-white">
                       <td className="border border-white p-1" scope="row">
@@ -85,8 +85,8 @@ export default function Specs() {
                         {spec.desc}
                       </td>
                       <td className="p-1 hover:underline" scope="row">
-                        <Link className=" " to={spec.link}>
-                          {spec.link}
+                        <Link className=" " to={spec.url}>
+                          {spec.url}
                         </Link>
                       </td>
                     </tr>
