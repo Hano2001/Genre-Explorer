@@ -34,31 +34,42 @@ export default function Specs() {
     },
   ];
   return (
-    <div className="text-white">
-      <h1>Main Dependecies and Frameworks I used to create this app</h1>
-      <div>
-        <table>
-          <thead>
-            <tr>
-              <th className="text-left" scope="col">
-                Dependency
-              </th>
-              <th className="text-left" scope="col">
-                Usage
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            {appSpecs.map((spec: { dep: string; desc: string }) => {
-              return (
-                <tr>
-                  <td scope="row">{spec.dep}:</td>
-                  <td scope="row">{spec.desc}</td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
+    <div className="flex flex-row">
+        <div className=" text-white basis-1/2">
+            <span>
+                I made this app using React Vite TypeScript. 
+            </span>
+        </div>
+      <div className="text-white basis-1/2">
+        <h1>Main Dependecies and Frameworks I used to create this app</h1>
+        <div>
+          <table>
+            <thead>
+              <tr>
+                <th className="text-left" scope="col">
+                  Dependency
+                </th>
+                <th className="text-left" scope="col">
+                  Usage
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {appSpecs.map((spec: { dep: string; desc: string }) => {
+                return (
+                  <tr className="border border-white">
+                    <td className="border border-white p-1" scope="row">
+                      {spec.dep}:
+                    </td>
+                    <td className="p-1" scope="row">
+                      {spec.desc}
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   );
