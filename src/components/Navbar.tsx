@@ -17,6 +17,10 @@ export default function Navbar() {
           ? "javascript:window.location.reload()"
           : "/random",
     },
+    {
+        name:"Specs",
+        link: "/specs"
+    }
   ];
 
   return (
