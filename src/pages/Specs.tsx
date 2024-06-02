@@ -1,16 +1,4 @@
-import React from "react";
-
 export default function Specs() {
-  //     "@babel/preset-typescript": "^7.24.1",
-  //     "@emotion/react": "^11.11.4",
-  //     "@emotion/styled": "^11.11.5",
-  //     "@mui/icons-material": "^5.15.19",
-  //     "@mui/material": "^5.15.19",
-  //     "react": "^18.2.0",
-  //     "react-dom": "^18.2.0",
-  //     "react-router-dom": "^6.23.1",
-  //     "react-youtube": "^10.1.0"
-  //   },
   const appSpecs = [
     {
       dep: "Babel and Jest",
