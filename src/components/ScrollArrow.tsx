@@ -1,6 +1,4 @@
-import React from "react";
 import ArrowCircleDownIcon from "@mui/icons-material/ArrowCircleDown";
-import { colors } from "@mui/material";
 
 export default function ScrollArrow() {
   return (

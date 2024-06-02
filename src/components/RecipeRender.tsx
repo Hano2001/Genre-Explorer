@@ -1,4 +1,4 @@
-import React, { createRef, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Imain, Tdata } from "./InterFaces_and_Types";
 import YoutubeRender from "./YoutubeRender";
 import DishImage from "./DishImage";
@@ -52,7 +52,7 @@ export default function RecipeRender(
         <h2 className="basis-1/3 text-center">Instructions</h2>
         <h2 className="basis-1/3 text-center">Looks good eh?</h2>
       </div>
-      <div className="flex flex-row bg-light bg-opacity-50 h-full overflow-hidden relative">
+      <div className="flex flex-row bg-light bg-opacity-50 h-full">
         <table className="align-center basis-2/6 h-[75%]">
           <thead>
             <tr>
@@ -76,7 +76,7 @@ export default function RecipeRender(
           </tbody>
         </table>
         {scrollDown === false ? (
-          <div className="fixed mt-[600px] ml-[40%] z-50">
+          <div className="fixed mt-[600px] ml-[40%]">
             <ScrollArrow />
           </div>
         ) : (
@@ -85,7 +85,7 @@ export default function RecipeRender(
         <div
           onScroll={(e) => ScrollDownChecker(e.target)}
           id="scrollDiv"
-          className="mt-2 h-[75%] basis-1/3 whitespace-pre-line px-3 mb-5 overflow-scroll no-scrollbar relative"
+          className="mt-2 h-[75%] basis-1/3 whitespace-pre-line px-3 mb-5 overflow-scroll no-scrollbar"
         >
           <span>{main.strInstructions}</span>
         </div>
