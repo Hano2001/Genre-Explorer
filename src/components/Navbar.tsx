@@ -25,6 +25,7 @@ export default function Navbar() {
 
   return (
     <div>
+        <h1 className="text-center font-bold text-2xl p-2">Recipe Explorer</h1>
       <nav className="bg-black h-10 w-full overflow-hidden ">
         <ol className="flex justify-between border bg-white pb-2">
           {links.map((link, index: number) => {
