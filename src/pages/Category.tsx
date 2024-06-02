@@ -28,23 +28,23 @@ export default function Category() {
       </div>
       <div className="row-span-2 col-span-2">
         <div className="flex flex-row">
-          <div className="grid p-3">
+          <div className="basis-1/2">
             <label htmlFor="new">Not happy?</label>
             <button
-              className="hover:animate-bounce hover:bg-white hover:text-black"
+              className="hover:animate-bounce hover:bg-white hover:text-black m-5"
               id="new"
               onClick={FetchNewRecipe}
             >
-              Generate new Recipe
+              --{">"}Generate new Recipe{"<"}--
             </button>
           </div>
-          <div className="grid p-3">
-            <label htmlFor="details">Interested?</label>
+          <div className="basis-1/2">
+            <label htmlFor="details">Interested? </label>
             <button
               id="details"
-              className="hover:animate-bounce hover:bg-white hover:text-black"
+              className="hover:animate-bounce hover:bg-white hover:text-black m-5"
             >
-              <Link to={recipeEndpoint}>Recipe Details</Link>
+              <Link to={recipeEndpoint}> --{">"}Recipe Details{"<"}--</Link>
             </button>
           </div>
         </div>
