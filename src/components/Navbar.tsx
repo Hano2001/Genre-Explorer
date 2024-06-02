@@ -32,7 +32,7 @@ export default function Navbar() {
             return (
               <li key={index}>
                 <Link
-                  className="p-2 rounded-md text-black hover:bg-black hover:text-white"
+                  className="p-4 text-black hover:bg-black hover:text-white"
                   to={link.link}
                 >
                   {link.name}
