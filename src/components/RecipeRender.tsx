@@ -2,6 +2,7 @@ import React, { createRef, useEffect, useState } from "react";
 import { Imain, Tdata } from "./InterFaces_and_Types";
 import YoutubeRender from "./YoutubeRender";
 import DishImage from "./DishImage";
+import ScrollArrow from "./ScrollArrow";
 
 export default function RecipeRender(
   this: any,
@@ -13,7 +14,14 @@ export default function RecipeRender(
 ) {
   const [scrollDown, setScrollDown] = useState(false);
 
-  function ScrollDown(props: any) {
+  useEffect(() => {
+    const element = document.getElementById("scrollDiv");
+    if (element) {
+      ScrollDownChecker(element);
+    }
+  }, []);
+
+  function ScrollDownChecker(props: any) {
     const { scrollTop, offsetHeight, scrollHeight } = props;
 
     setScrollDown(scrollTop === scrollHeight - offsetHeight);
@@ -31,12 +39,11 @@ export default function RecipeRender(
 
   return (
     <div
-      className="bg-cover bg-no-repeat h-full overflow-hidden"
+      className="bg-cover bg-no-repeat h-full overflow-hidden relative"
       style={backgroundStyles}
     >
       <div className="bg-black">
         <h1 className="text-center font-bold">{main.strMeal.toUpperCase()}</h1>
-        <h1>{scrollDown ? "True" : "False"}</h1>
         <h1 className="text-center">{descriptionString}</h1>
         {main.strYoutube ? <YoutubeRender id={youtubeID} /> : ""}
       </div>
@@ -45,7 +52,7 @@ export default function RecipeRender(
         <h2 className="basis-1/3 text-center">Instructions</h2>
         <h2 className="basis-1/3 text-center">Looks good eh?</h2>
       </div>
-      <div className="flex flex-row bg-light bg-opacity-50 h-full overflow-hidden">
+      <div className="flex flex-row bg-light bg-opacity-50 h-full overflow-hidden relative">
         <table className="align-center basis-2/6 h-[75%]">
           <thead>
             <tr>
@@ -68,10 +75,17 @@ export default function RecipeRender(
             })}
           </tbody>
         </table>
+        {scrollDown === false ? (
+          <div className="fixed mt-[600px] ml-[40%] z-50">
+            <ScrollArrow />
+          </div>
+        ) : (
+          ""
+        )}
         <div
-          onScroll={(e) => ScrollDown(e.target)}
+          onScroll={(e) => ScrollDownChecker(e.target)}
           id="scrollDiv"
-          className="mt-2 h-[75%] basis-1/3 whitespace-pre-line px-3 mb-5 overflow-scroll no-scrollbar"
+          className="mt-2 h-[75%] basis-1/3 whitespace-pre-line px-3 mb-5 overflow-scroll no-scrollbar relative"
         >
           <span>{main.strInstructions}</span>
         </div>
