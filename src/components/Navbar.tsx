@@ -22,12 +22,12 @@ export default function Navbar() {
   return (
     <div>
       <nav className="bg-black h-10 w-full overflow-hidden ">
-        <ol className="flex justify-between border border-b-white pb-2">
+        <ol className="flex justify-between border bg-white pb-2">
           {links.map((link, index: number) => {
             return (
               <li key={index}>
                 <Link
-                  className="p-2 rounded-md text-light hover:bg-light hover:text-black"
+                  className="p-2 rounded-md text-black hover:bg-black hover:text-white"
                   to={link.link}
                 >
                   {link.name}

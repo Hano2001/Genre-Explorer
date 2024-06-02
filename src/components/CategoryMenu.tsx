@@ -12,13 +12,14 @@ export default function CategoryMenu({ list }: any) {
   }, [selected]);
   return (
     <>
-      <label htmlFor="categories">Choose a category: </label>
+      <label className="text-black" htmlFor="categories">Choose a category: </label>
       <select
+      className="border border-black mt-1 mr-1 text-black"
         name="categories"
         id="categories"
         onChange={(value) => setSelected(value.target.value)}
       >
-        <option value="x">-</option>
+        <option value="x"></option>
 
         {list.map((category: Imain) => {
           return (
