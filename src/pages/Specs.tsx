@@ -34,13 +34,19 @@ export default function Specs() {
     },
   ];
   return (
-    <div className="flex flex-row">
-        <div className=" text-white basis-1/2">
-            <span>
-                I made this app using React Vite TypeScript. 
-            </span>
-        </div>
-      <div className="text-white basis-1/2">
+    <div className="flex flex-row m-5">
+      <div className=" text-white basis-2/3 m-5 ml-0">
+        <span className="text-center whitespace-pre-line">
+          I made this app using React Vite TypeScript, my initial intention for
+          this app, was to make a music app. That also randomized depending on
+          catagory, but in that case, I would be genre, and instead of recipe,
+          it would be band or artist. But during this interesting process of
+          making this recipe app, I learned something that every developer
+          should know; If you plan on coding an app around an API, choose the
+          API first, not the idea, I learned that the hard way.
+        </span>
+      </div>
+      <div className="text-white basis-1/3 ">
         <h1>Main Dependecies and Frameworks I used to create this app</h1>
         <div>
           <table>
@@ -54,7 +60,7 @@ export default function Specs() {
                 </th>
               </tr>
             </thead>
-            <tbody>
+            <tbody className="w-full">
               {appSpecs.map((spec: { dep: string; desc: string }) => {
                 return (
                   <tr className="border border-white">
